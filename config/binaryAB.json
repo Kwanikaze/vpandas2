@@ -1,0 +1,20 @@
+{
+    "data_name" : "data_2",
+    "data_dir" : "./data/",
+    "latent_dims" : 1, 
+    "num_epochs" : 200,
+    "batch_size" : 256,
+    "learning_rate" : 1e-2,
+    "activation": "sigmoid",
+    "anneal_factor": 1000,
+    "anneal_factor_optimal": 2000,
+    "variational_beta" : 0.1,
+    "patience": 20,
+    "random_seed": 2,
+    "hypertune": "True",
+    "emperical": "False",
+    "graph_samples": "True",
+    "add_noise": "False",
+    "train_on_query": "False"
+}
+
