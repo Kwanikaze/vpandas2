@@ -6,10 +6,13 @@ from torchvision import datasets, transforms
 from tqdm import tqdm
 
 from utils.utils import rmse_loss, log_normal, normal_KLD, impute, init_weights, renormalization, rounding, save_image_reconstructions_with_mask
-from models import vae, gmvae, psmvae_a, psmvae_b, psmvae_c
+from models import vae, vae_pmd, gmvae, psmvae_a, psmvae_b, psmvae_c
+
+#from .pytorchtools import EarlyStopping
 
 model_map = {
     'VAE': vae.VAE,
+    'VAE_PMD': vae_pmd.VAE,
     'GMVAE': gmvae.GMVAE,
     'DLGMVAE': psmvae_b.Model,
     'PSMVAEwoM': psmvae_b.Model,
@@ -110,8 +113,8 @@ def loss(recon, variational_params, latent_samples, data, compl_data, M_obs, M_m
 def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data_test_full, wandb, args, norm_parameters):
         
     #args.device = torch.device("cuda" if args.cuda else "cpu")
-    args.device = torch.device("cuda")
-    args.cuda = True
+    #args.device = torch.device("cuda")
+    #args.cuda = True
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
 
     M_sim_miss_train_full = np.isnan(data_train_full) & ~np.isnan(compl_data_train_full)
@@ -125,7 +128,8 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
 
     norm_type = 'minmax' * args.mnist + 'standard' * (1-args.mnist)
     compl_data_train_full_renorm = renormalization(compl_data_train_full.copy(), norm_parameters, norm_type)
-
+    # initialize the early_stopping object
+    #early_stopping = EarlyStopping(patience=args.patience, verbose=False)
     for epoch in tqdm(range(args.max_epochs)):
 
         model.train()
@@ -157,15 +161,9 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
                     train_imputed_xobs_ = renormalization(torch.einsum("ik,kij->ij", [variational_params_train['qy'].cpu(), recon_train['xobs'].cpu()]), norm_parameters)
                 train_imputed_xobs_ = rounding(train_imputed_xobs_, compl_data_train_full_renorm)
                 train_xobs_mis_mse = rmse_loss(train_imputed_xobs_.cpu().numpy().squeeze(), compl_data_train_full_renorm, M_sim_miss_train_full)
-                if 'PSMVAE' in args.model_class:
-                    train_imputed_xmis_ = renormalization(torch.einsum("ik,kij->ij", [variational_params_train['qy'], recon_train['xmis']]), norm_parameters)
-                    train_imputed_xmis_ = rounding(train_imputed_xmis_, compl_data_train_full_renorm)
-                    train_xmis_mis_mse = rmse_loss(train_imputed_xmis_.cpu().numpy().squeeze(), compl_data_train_full_renorm, M_sim_miss_train_full)
-                else:
-                    train_xmis_mis_mse = 0
+                train_xmis_mis_mse = 0
 
                 wandb.log({'xobs imp rmse': train_xobs_mis_mse, 'xmis imp rmse': train_xmis_mis_mse,})
-
 
 
             #     for batch_idx, (data, compl_data) in enumerate(test_loader):
@@ -184,14 +182,12 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
     
     with torch.no_grad():
 
-        if args.model_class == 'PSMVAE_a' or args.model_class == 'PSMVAE_b':
-            imp_name = 'xobs' # !!!!!!!!!!!!!!!!!!!!!
-        else:
-            imp_name = 'xobs'
+
+        imp_name = 'xobs'
         # single importance sample
         recon_train, variational_params_train, latent_samples_train = model(data_train_filled_full, torch.tensor(M_sim_miss_train_full).to(args.device))
         data_test_filled_full = torch.from_numpy(np.nan_to_num(data_test_full.copy(), 0)).to(args.device).float()
-        M_sim_miss_test_full = np.isnan(data_test_full) & ~np.isnan(compl_data_test_full)
+        M_sim_miss_test_full = np.isnan(data_test_full) & ~np.isnan(compl_data_test_full) #Mask
         recon_test, variational_params_test, latent_samples_test = model(data_test_filled_full, torch.tensor(M_sim_miss_test_full).to(args.device))
         if variational_params_train['qy'] == None:
             recon_train['xobs'] = recon_train['xobs'].repeat((1,1,1)).cpu()
@@ -212,6 +208,7 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
                 'xobs': (train_imputed_xobs.cpu().numpy(), train_imputed_1_xobs.cpu().numpy(), test_imputed.cpu().numpy()),
                 'xmis': (train_imputed_xmis.cpu().numpy(), train_imputed_1_xmis.cpu().numpy(), test_imputed.cpu().numpy())
             }[imp_name]
+        """
         else:
             if not args.mul_imp:
                 # multiple importance samples
@@ -255,5 +252,5 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
                 }[imp_name]
 
                 train_imputed, train_imputed_1, test_imputed = [train_imputed[i] for i in range(args.num_samples)], [train_imputed_1[i] for i in range(args.num_samples)], [test_imputed[i] for i in range(args.num_samples)]
-
-    return(train_imputed, train_imputed_1, test_imputed)
+        """
+    return(model,train_imputed, train_imputed_1, test_imputed)

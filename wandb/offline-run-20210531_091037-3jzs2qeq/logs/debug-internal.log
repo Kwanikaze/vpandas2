@@ -1,0 +1,17 @@
+2021-05-31 09:10:39,232 INFO    MainThread:10256 [internal.py:wandb_internal():64] W&B internal server running at pid: 10256
+2021-05-31 09:10:39,234 INFO    WriterThread:10256 [datastore.py:open_for_write():77] open: c:\vpandas2\wandb\offline-run-20210531_091037-3jzs2qeq\run-3jzs2qeq.wandb
+2021-05-31 09:10:39,235 DEBUG   HandlerThread:10256 [handler.py:handle_request():55] handle_request: run_start
+2021-05-31 09:10:39,254 DEBUG   HandlerThread:10256 [meta.py:__init__():34] meta init
+2021-05-31 09:10:39,254 DEBUG   HandlerThread:10256 [meta.py:__init__():48] meta init done
+2021-05-31 09:10:39,254 DEBUG   HandlerThread:10256 [meta.py:probe():190] probe
+2021-05-31 09:10:39,365 DEBUG   HandlerThread:10256 [util.py:is_cygwin_git():355] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+2021-05-31 09:10:39,366 DEBUG   HandlerThread:10256 [meta.py:_setup_git():180] setup git
+2021-05-31 09:10:39,368 DEBUG   HandlerThread:10256 [cmd.py:execute():818] Popen(['git', 'cat-file', '--batch-check'], cwd=c:\vpandas2, universal_newlines=False, shell=None, istream=<valid stream>)
+2021-05-31 09:10:39,414 DEBUG   HandlerThread:10256 [cmd.py:execute():818] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=c:\vpandas2, universal_newlines=False, shell=None, istream=None)
+2021-05-31 09:10:39,459 DEBUG   HandlerThread:10256 [meta.py:_setup_git():187] setup git done
+2021-05-31 09:10:39,459 DEBUG   HandlerThread:10256 [meta.py:_save_code():69] save code
+2021-05-31 09:10:39,459 DEBUG   HandlerThread:10256 [cmd.py:execute():818] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=c:\vpandas2, universal_newlines=False, shell=None, istream=None)
+2021-05-31 09:10:39,530 DEBUG   HandlerThread:10256 [meta.py:_save_code():90] save code done
+2021-05-31 09:10:39,530 DEBUG   HandlerThread:10256 [meta.py:_save_patches():107] save patches
+2021-05-31 09:10:39,530 DEBUG   HandlerThread:10256 [cmd.py:execute():818] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=c:\vpandas2, universal_newlines=False, shell=None, istream=None)
+2021-05-31 09:10:39,585 DEBUG   HandlerThread:10256 [cmd.py:execute():818] Popen(['git', 'version'], cwd=c:\vpandas2, universal_newlines=False, shell=None, istream=None)

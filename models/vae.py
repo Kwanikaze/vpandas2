@@ -13,8 +13,8 @@ class VAE(nn.Module):
 
         self.fc1 = nn.Linear(num_in, model_params_dict.h_dim)
         self.fc2 = nn.Linear(model_params_dict.h_dim, model_params_dict.h_dim)
-        self.fc21 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim)
-        self.fc22 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim)
+        self.fc21 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim) #mean
+        self.fc22 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim) #logvar
         self.fc3 = nn.Linear(model_params_dict.z_dim, model_params_dict.h_dim)
         self.fc3b = nn.Linear(model_params_dict.h_dim, model_params_dict.h_dim)
         self.fc4 = nn.Linear(model_params_dict.h_dim, num_in)
@@ -70,3 +70,15 @@ class VAE(nn.Module):
       }
       latent_samples = {'z': z}
       return recon, variational_params, latent_samples
+
+
+    def query_single_attribute(self, x, m, query_attr_index, L=100, test_mode=False):
+      print("input")
+      print(x)
+      xm = torch.cat((x,m),1)
+      mu, logvar = self.encode(xm)
+      z = self.reparameterize(mu, logvar, test_mode, L)
+      recon = self.decode(z,m)
+      #print("output")
+      #print(recon)
+      return recon

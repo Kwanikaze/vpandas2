@@ -13,6 +13,17 @@ def MCAR(data, missingness_ratio = 0.2, seed = 0):
     M = pd.DataFrame(np.random.binomial(size=data.shape, n=1, p=missingness_ratio) == True)
     return(M, None) 
 
+#def MCAR_label(data, missingness_ratio = 0.2, seed = 0):
+    #min sum of each row is 1
+    #max sum of each row is #labels
+    #Always observe at least 1 attribute
+    #np.random.seed(seed)
+    #M = 
+
+#def NoMissingTrainOneMissingTest(data):
+    # Train data has 1-missingness_ratio fully observed rows, missingness_ratio rows are fully missing
+    # Irrelevent of missingness_ratio, test data has only 1 random attribute present, the rest are missing
+
 
 def MAR(data, missingness_ratio=0.2, seed = 0):
     np.random.seed(seed)

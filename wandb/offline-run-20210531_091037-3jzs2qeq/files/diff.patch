@@ -1,0 +1,1195 @@
+diff --git a/__pycache__/preprocess.cpython-37.pyc b/__pycache__/preprocess.cpython-37.pyc
+index d75a686..39a53e3 100644
+Binary files a/__pycache__/preprocess.cpython-37.pyc and b/__pycache__/preprocess.cpython-37.pyc differ
+diff --git a/__pycache__/train.cpython-37.pyc b/__pycache__/train.cpython-37.pyc
+index 9a6c782..9cd1197 100644
+Binary files a/__pycache__/train.cpython-37.pyc and b/__pycache__/train.cpython-37.pyc differ
+diff --git a/data/binaryAB/data.csv.csv b/data/binaryAB/data.csv.csv
+deleted file mode 100644
+index a6fd9dd..0000000
+--- a/data/binaryAB/data.csv.csv
++++ /dev/null
+@@ -1,800 +0,0 @@
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+-0,0
+-0,0
+-0,0
+-0,1
+-1,0
+-1,0
+-1,1
+-1,1
+-1,1
+-1,1
+diff --git a/main.py b/main.py
+index 6c7faaf..3d6ad6e 100644
+--- a/main.py
++++ b/main.py
+@@ -7,7 +7,10 @@ import sys
+ import torch
+ import torch.utils.data
+ import wandb
++import math
+ os.environ['WANDB_NOTEBOOK_NAME'] = 'some text here'
++os.environ['WANDB_SILENT'] = 'true'
++os.environ['WANDB_MODE'] = 'offline'
+ 
+ from utils.utils import make_deterministic, save_image_reconstructions
+ from utils.utils import rounding, renormalization, normalization, rmse_loss
+@@ -20,43 +23,53 @@ from sklearn.linear_model import BayesianRidge
+ 
+ model_map = {
+     'mean': 'mean',
+-    'missForest': IterativeImputer,
+-    'mice': IterativeImputer,
+     'VAE': train_VAE,
+-    'GMVAE': train_VAE,
+     'VAE_PMD': train_VAE  #Collier
+ }
+ 
+-args = params.Params('./config/binaryAB.json')
++config_name = 'binaryAB'
++args = params.Params('./config/' + str(config_name)+ '.json')
+ args.cuda = torch.cuda.is_available()
+-args.mul_imp = True
++args.mul_imp = False
+ args.targets_file = None
+ args.post_sample = False
+ if args.mul_imp:
+     args.post_sample = True
+ 
+ if args.cuda:
+-        args.log_interval = 1
++    args.log_interval = 1
+ 
+ args.downstream_logreg = False
+ args.h_dim = 128 #dimension of hidden layers
+ args.z_dim = 20 #dimension of latent space
+ args.weight_decay = 0
+-args.max_epochs = 1000
++args.max_epochs = 500
+ args.z_beta = 1
+ args.r_beta = 1
+ args.xmis_beta = 1
+ args.learning_rate = 1e-3
+-args.batch_size =512
++args.batch_size = 200
+ args.miss_mask_training = False
+ args.r_cat_dim = 10
++#args.patience = 50
++
++if config_name == 'binaryAB':
++    args.h_dim = 8
++    args.z_dim = 4
++    args.batch_size = 64
++    args.max_epochs = 100
++    args.learning_rate = 1e-2
++    print("Modified args")
++    args.cuda = False
++    args.device = torch.device("cpu")
+ 
+ def main(args): 
+-    for seed in [0,1,2,3,4]:
+-        for data_file in ['breast']:
+-            for miss_type in ['MCAR']:
+-                for miss_ratio in [0.20, 0.80]:
+-                    for model_class in ['mean', 'mice','missForest','VAE', 'GMVAE']: #, 'VAE_PMD','missForest','mean', 'mice'
++    for seed in [0,1,2,3,4]:#0 to 4
++        for data_file in ['binaryAB']:#'breast','credit'
++            for miss_type in ['MNAR1var']: # 'MNAR1var'
++                for miss_ratio in [0.8]: #0.8
++                    for model_class in ['VAE_PMD']: #, 'VAE_PMD','missForest','mean', 'mice'
++                        VAE_model = -1
+                         args.seed = seed
+                         args.data_file = os.path.join("data",data_file)
+                         args.miss_type = miss_type
+@@ -67,6 +80,8 @@ def main(args):
+                         args.miss_type = miss_type
+                         args.miss_ratio = miss_ratio
+                         args.model_class = model_class
++                        if ('VAE_PMD' == args.model_class):
++                            args.miss_mask_training = True
+                         args.mnist = ('MNIST' in args.compl_data_file)
+                         args.wandb_run_name = model_class+"_"+data_file+"_"+miss_type+"_uniform_frac_"+str(miss_ratio)+"_seed_"+str(seed)
+                         args.wandb_tag = 'run_new'
+@@ -87,7 +102,7 @@ def main(args):
+                         data_train_ori = compl_data_train_ori.mask(M_sim_miss_train)
+                         data_val_ori = compl_data_val_ori.mask(M_sim_miss_val)
+                         data_test_ori = compl_data_test_ori.mask(M_sim_miss_test)
+-                        try:
++                        try: #mnist
+                             targets_train = np.squeeze(pd.read_csv(train_files[2], header=None).values) 
+                             targets_val = np.squeeze(pd.read_csv(val_files[2], header=None).values) 
+                             targets_test = np.squeeze(pd.read_csv(test_files[2], header=None).values) 
+@@ -108,6 +123,9 @@ def main(args):
+ 
+                         # normalize data 
+                         norm_type = 'minmax' * args.mnist + 'standard' * (1-args.mnist)
++                        #print(M_sim_miss_train) #False for observed, True for non-observed
++                        #print("Data Train Original")
++                        #print(data_train_ori.values) #has actual value for observed, has nan for non-observed
+                         data_train, norm_parameters = normalization(data_train_ori.values, None, norm_type)
+                         data_val, _ = normalization(data_val_ori.values, norm_parameters, norm_type)
+                         data_test, _ = normalization(data_test_ori.values, norm_parameters, norm_type)
+@@ -142,7 +160,7 @@ def main(args):
+                                 train_imputed = data_train_df.fillna(data_train_df.mean(), inplace=False).values
+                                 test_imputed = data_test_df.fillna(data_train_df.mean(), inplace=False).values         
+                             if 'VAE' in args.model_class:
+-                                train_imputed, train_imputed_1, test_imputed = model_map[args.model_class](data_train, data_test, compl_data_train, compl_data_test, wandb, args, norm_parameters)
++                                VAE_model,train_imputed, train_imputed_1, test_imputed = model_map[args.model_class](data_train, data_test, compl_data_train, compl_data_test, wandb, args, norm_parameters)
+                             elif (args.model_class == 'miwae') or (args.model_class == 'notmiwae'):
+                                 train_imputed, test_imputed = model_map[args.model_class](compl_data_train, data_train, compl_data_test, compl_data_test, norm_parameters, wandb, args)
+                     
+@@ -162,6 +180,8 @@ def main(args):
+                             # rounding
+                             train_imputed = rounding(train_imputed, compl_data_train)
+                             test_imputed = rounding(test_imputed, compl_data_test)
++                            test_imputed_df = pd.DataFrame(test_imputed)
++                            test_imputed_df.to_csv(os.path.join(args.data_file, "miss_data", miss_file_name + "imputed_test.csv"), header=False, index=False)
+                         else:
+                             # renormalization
+                             train_imputed = [renormalization(train_imputed[i], norm_parameters, norm_type) for i in range(len(train_imputed))]
+@@ -172,7 +192,6 @@ def main(args):
+                             # rounding
+                             train_imputed = [rounding(train_imputed[i], compl_data_train) for i in range(len(train_imputed))]
+                             test_imputed = [rounding(test_imputed[i], compl_data_test) for i in range(len(test_imputed))]
+-
+                         # save imputations
+                         if not args.mul_imp:
+                             try:
+@@ -219,6 +238,43 @@ def main(args):
+ 
+                                 wandb.log({'Test accuracy': test_acc})
+                                 print(test_acc)
++                        return VAE_model, norm_parameters, norm_type
+ 
+ if __name__ == "__main__":
+-    main(args)
+\ No newline at end of file
++    #queryBgivenA = np.array([[0,math.nan],[1,math.nan]]) #A is 1
++    #queryBgivenA[queryBgivenA!=queryBgivenA] = 0 #nan values set to 0
++    #print(queryBgivenA)
++
++    VAE_model, norm_parameters, norm_type = main(args)
++    print(norm_parameters)
++    mask = np.array([[False,True],[False,True]])
++    mask = torch.tensor(mask).to(args.device).float()
++
++    queryBgivenA = np.array([[0,math.nan],[1,math.nan]]) #A index = 0
++    query_normalized = renormalization(queryBgivenA, norm_parameters, norm_type)
++    query_normalized[query_normalized!=query_normalized] = 0 #nan values set to 0
++    query_normalized = torch.tensor(query_normalized).to(args.device).float()
++    #ToDO write function to create mask based on nan values
++
++    #print(mask)
++    #print(query_normalized)
++    query_attr_index = 1
++    xB_query = VAE_model.query_single_attribute(query_normalized[0].unsqueeze(0), mask[0].unsqueeze(0), query_attr_index, L = 100)
++    xB_query = renormalization(xB_query.cpu().detach().numpy(), norm_parameters, norm_type)
++    #print(xB_query)
++    xB_query = rounding(xB_query,np.ones(xB_query.shape)) #since all categorical
++    unique, counts = np.unique(xB_query[:,query_attr_index], return_counts=True)
++    xB_query = dict(zip(unique, counts))
++    print("P(B|A=0)")
++    print(xB_query)
++    print("All done!")
++
++    xB_query = VAE_model.query_single_attribute(query_normalized[1].unsqueeze(0), mask[1].unsqueeze(0), query_attr_index, L = 100)
++    xB_query = renormalization(xB_query.cpu().detach().numpy(), norm_parameters, norm_type)
++    #print(xB_query)
++    xB_query = rounding(xB_query,np.zeros(xB_query.shape)) #since all categorical
++    unique, counts = np.unique(xB_query[:,query_attr_index], return_counts=True)
++    xB_query = dict(zip(unique, counts))
++    print("P(B|A=1)")
++    print(xB_query)
++    print("All done!")
+\ No newline at end of file
+diff --git a/main_pre_process.py b/main_pre_process.py
+index 69ca2e2..c71df40 100644
+--- a/main_pre_process.py
++++ b/main_pre_process.py
+@@ -26,9 +26,9 @@ miss_type_map = {
+ }
+ 
+ for seed in [0,1,2,3,4]:
+-    for data_file in ['breast']:
+-        for miss_type in ['MCAR']:
+-            for miss_ratio in [0.20, 0.80]:
++    for data_file in ['binaryAB']: #,'breast','credit'
++        for miss_type in ['MCAR','MNAR1var']: #
++            for miss_ratio in [0.8]:
+                 args.seed = seed
+                 args.data_file = os.path.join("data",data_file)
+                 args.miss_type = miss_type
+@@ -67,6 +67,8 @@ for seed in [0,1,2,3,4]:
+                 val_idx = int((args.train_pct+args.val_pct)*len(data))
+                 random_permute = np.random.RandomState(seed=args.seed).permutation(len(data))
+                 M_train, M_val, M_test = M.iloc[random_permute[:train_idx]], M.iloc[random_permute[train_idx:val_idx]], M.iloc[random_permute[val_idx:]]  
++                print(M_train)
++                print(M_test)
+                 data_train, data_val, data_test = data.iloc[random_permute[:train_idx]], data.iloc[random_permute[train_idx:val_idx]], data.iloc[random_permute[val_idx:]] 
+ 
+                  # save induced missing data
+@@ -88,11 +90,12 @@ for seed in [0,1,2,3,4]:
+                     patternsets_train.to_csv(os.path.join(args.data_file, "miss_data", f"{miss_file_name}_patternsets.train"), header=False, index=False)
+                     patternsets_val.to_csv(os.path.join(args.data_file, "miss_data", f"{miss_file_name}_patternsets.val"), header=False, index=False)
+                     patternsets_test.to_csv(os.path.join(args.data_file, "miss_data", f"{miss_file_name}_patternsets.test"), header=False, index=False)
+-                
+-                    try:
+-                        targets_train, targets_val, targets_test = targets.iloc[random_permute[:train_idx]], targets.iloc[random_permute[train_idx:val_idx]], targets.iloc[random_permute[val_idx:]]  
+-                        targets_train.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.train"), header=False, index=False)
+-                        targets_val.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.val"), header=False, index=False)
+-                        targets_test.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.test"), header=False, index=False)
+-                    except UnboundLocalError:
+-                        pass
+\ No newline at end of file
++                """
++                try:
++                    targets_train, targets_val, targets_test = targets.iloc[random_permute[:train_idx]], targets.iloc[random_permute[train_idx:val_idx]], targets.iloc[random_permute[val_idx:]]  
++                    targets_train.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.train"), header=False, index=False)
++                    targets_val.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.val"), header=False, index=False)
++                    targets_test.to_csv(os.path.join(args.data_file, f"targets_{args.seed}.test"), header=False, index=False)
++                except UnboundLocalError:
++                    pass
++                """
+\ No newline at end of file
+diff --git a/models/__pycache__/vae.cpython-37.pyc b/models/__pycache__/vae.cpython-37.pyc
+index f476e0e..c154c6e 100644
+Binary files a/models/__pycache__/vae.cpython-37.pyc and b/models/__pycache__/vae.cpython-37.pyc differ
+diff --git a/models/vae.py b/models/vae.py
+index 5e1b11c..25e79ba 100644
+--- a/models/vae.py
++++ b/models/vae.py
+@@ -13,8 +13,8 @@ class VAE(nn.Module):
+ 
+         self.fc1 = nn.Linear(num_in, model_params_dict.h_dim)
+         self.fc2 = nn.Linear(model_params_dict.h_dim, model_params_dict.h_dim)
+-        self.fc21 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim)
+-        self.fc22 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim)
++        self.fc21 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim) #mean
++        self.fc22 = nn.Linear(model_params_dict.h_dim, model_params_dict.z_dim) #logvar
+         self.fc3 = nn.Linear(model_params_dict.z_dim, model_params_dict.h_dim)
+         self.fc3b = nn.Linear(model_params_dict.h_dim, model_params_dict.h_dim)
+         self.fc4 = nn.Linear(model_params_dict.h_dim, num_in)
+@@ -70,3 +70,15 @@ class VAE(nn.Module):
+       }
+       latent_samples = {'z': z}
+       return recon, variational_params, latent_samples
++
++
++    def query_single_attribute(self, x, m, query_attr_index, L=100, test_mode=False):
++      print("input")
++      print(x)
++      xm = torch.cat((x,m),1)
++      mu, logvar = self.encode(xm)
++      z = self.reparameterize(mu, logvar, test_mode, L)
++      recon = self.decode(z,m)
++      #print("output")
++      #print(recon)
++      return recon
+diff --git a/preprocess.py b/preprocess.py
+index 4f3c7c1..2bcd81e 100644
+--- a/preprocess.py
++++ b/preprocess.py
+@@ -13,6 +13,17 @@ def MCAR(data, missingness_ratio = 0.2, seed = 0):
+     M = pd.DataFrame(np.random.binomial(size=data.shape, n=1, p=missingness_ratio) == True)
+     return(M, None) 
+ 
++#def MCAR_label(data, missingness_ratio = 0.2, seed = 0):
++    #min sum of each row is 1
++    #max sum of each row is #labels
++    #Always observe at least 1 attribute
++    #np.random.seed(seed)
++    #M = 
++
++#def NoMissingTrainOneMissingTest(data):
++    # Train data has 1-missingness_ratio fully observed rows, missingness_ratio rows are fully missing
++    # Irrelevent of missingness_ratio, test data has only 1 random attribute present, the rest are missing
++
+ 
+ def MAR(data, missingness_ratio=0.2, seed = 0):
+     np.random.seed(seed)
+diff --git a/train.py b/train.py
+index 2a17da4..6e67824 100644
+--- a/train.py
++++ b/train.py
+@@ -6,10 +6,13 @@ from torchvision import datasets, transforms
+ from tqdm import tqdm
+ 
+ from utils.utils import rmse_loss, log_normal, normal_KLD, impute, init_weights, renormalization, rounding, save_image_reconstructions_with_mask
+-from models import vae, gmvae, psmvae_a, psmvae_b, psmvae_c
++from models import vae, vae_pmd, gmvae, psmvae_a, psmvae_b, psmvae_c
++
++#from .pytorchtools import EarlyStopping
+ 
+ model_map = {
+     'VAE': vae.VAE,
++    'VAE_PMD': vae_pmd.VAE,
+     'GMVAE': gmvae.GMVAE,
+     'DLGMVAE': psmvae_b.Model,
+     'PSMVAEwoM': psmvae_b.Model,
+@@ -110,8 +113,8 @@ def loss(recon, variational_params, latent_samples, data, compl_data, M_obs, M_m
+ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data_test_full, wandb, args, norm_parameters):
+         
+     #args.device = torch.device("cuda" if args.cuda else "cpu")
+-    args.device = torch.device("cuda")
+-    args.cuda = True
++    #args.device = torch.device("cuda")
++    #args.cuda = True
+     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
+ 
+     M_sim_miss_train_full = np.isnan(data_train_full) & ~np.isnan(compl_data_train_full)
+@@ -125,7 +128,8 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
+ 
+     norm_type = 'minmax' * args.mnist + 'standard' * (1-args.mnist)
+     compl_data_train_full_renorm = renormalization(compl_data_train_full.copy(), norm_parameters, norm_type)
+-
++    # initialize the early_stopping object
++    #early_stopping = EarlyStopping(patience=args.patience, verbose=False)
+     for epoch in tqdm(range(args.max_epochs)):
+ 
+         model.train()
+@@ -157,17 +161,11 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
+                     train_imputed_xobs_ = renormalization(torch.einsum("ik,kij->ij", [variational_params_train['qy'].cpu(), recon_train['xobs'].cpu()]), norm_parameters)
+                 train_imputed_xobs_ = rounding(train_imputed_xobs_, compl_data_train_full_renorm)
+                 train_xobs_mis_mse = rmse_loss(train_imputed_xobs_.cpu().numpy().squeeze(), compl_data_train_full_renorm, M_sim_miss_train_full)
+-                if 'PSMVAE' in args.model_class:
+-                    train_imputed_xmis_ = renormalization(torch.einsum("ik,kij->ij", [variational_params_train['qy'], recon_train['xmis']]), norm_parameters)
+-                    train_imputed_xmis_ = rounding(train_imputed_xmis_, compl_data_train_full_renorm)
+-                    train_xmis_mis_mse = rmse_loss(train_imputed_xmis_.cpu().numpy().squeeze(), compl_data_train_full_renorm, M_sim_miss_train_full)
+-                else:
+-                    train_xmis_mis_mse = 0
++                train_xmis_mis_mse = 0
+ 
+                 wandb.log({'xobs imp rmse': train_xobs_mis_mse, 'xmis imp rmse': train_xmis_mis_mse,})
+ 
+ 
+-
+             #     for batch_idx, (data, compl_data) in enumerate(test_loader):
+             #         # data 
+             #         data = data.float().to(args.device)
+@@ -184,14 +182,12 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
+     
+     with torch.no_grad():
+ 
+-        if args.model_class == 'PSMVAE_a' or args.model_class == 'PSMVAE_b':
+-            imp_name = 'xobs' # !!!!!!!!!!!!!!!!!!!!!
+-        else:
+-            imp_name = 'xobs'
++
++        imp_name = 'xobs'
+         # single importance sample
+         recon_train, variational_params_train, latent_samples_train = model(data_train_filled_full, torch.tensor(M_sim_miss_train_full).to(args.device))
+         data_test_filled_full = torch.from_numpy(np.nan_to_num(data_test_full.copy(), 0)).to(args.device).float()
+-        M_sim_miss_test_full = np.isnan(data_test_full) & ~np.isnan(compl_data_test_full)
++        M_sim_miss_test_full = np.isnan(data_test_full) & ~np.isnan(compl_data_test_full) #Mask
+         recon_test, variational_params_test, latent_samples_test = model(data_test_filled_full, torch.tensor(M_sim_miss_test_full).to(args.device))
+         if variational_params_train['qy'] == None:
+             recon_train['xobs'] = recon_train['xobs'].repeat((1,1,1)).cpu()
+@@ -212,6 +208,7 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
+                 'xobs': (train_imputed_xobs.cpu().numpy(), train_imputed_1_xobs.cpu().numpy(), test_imputed.cpu().numpy()),
+                 'xmis': (train_imputed_xmis.cpu().numpy(), train_imputed_1_xmis.cpu().numpy(), test_imputed.cpu().numpy())
+             }[imp_name]
++        """
+         else:
+             if not args.mul_imp:
+                 # multiple importance samples
+@@ -255,5 +252,5 @@ def train_VAE(data_train_full, data_test_full, compl_data_train_full, compl_data
+                 }[imp_name]
+ 
+                 train_imputed, train_imputed_1, test_imputed = [train_imputed[i] for i in range(args.num_samples)], [train_imputed_1[i] for i in range(args.num_samples)], [test_imputed[i] for i in range(args.num_samples)]
+-
+-    return(train_imputed, train_imputed_1, test_imputed)
+\ No newline at end of file
++        """
++    return(model,train_imputed, train_imputed_1, test_imputed)
+\ No newline at end of file

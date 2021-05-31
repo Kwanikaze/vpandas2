@@ -1,0 +1,5 @@
+2021-05-31 09:10:37,583 INFO    MainThread:7008 [wandb_setup.py:_flush():70] setting env: {'notebook_name': 'some text here', 'silent': 'true', 'mode': 'offline'}
+2021-05-31 09:10:37,583 INFO    MainThread:7008 [wandb_setup.py:_flush():70] multiprocessing start_methods=spawn
+2021-05-31 09:10:37,583 INFO    MainThread:7008 [wandb_setup.py:_flush():70] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001BF1896C208>
+2021-05-31 09:10:37,583 INFO    MainThread:7008 [wandb_init.py:_log_setup():318] Logging user logs to c:\vpandas2\wandb\offline-run-20210531_091037-3jzs2qeq\logs\debug.log
+2021-05-31 09:10:37,584 INFO    MainThread:7008 [wandb_init.py:_log_setup():319] Logging internal logs to c:\vpandas2\wandb\offline-run-20210531_091037-3jzs2qeq\logs\debug-internal.log
